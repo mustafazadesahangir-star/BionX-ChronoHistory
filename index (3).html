@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BionX ChronoHistory: WW2 Chronicles</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #333;
+        }
+        header h1 {
+            color: #ff4d4d;
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+        header p {
+            color: #888;
+            font-size: 14px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 10px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #333;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+        }
+        .event-card {
+            padding: 10px 30px;
+            position: relative;
+            background-color: transparent;
+        }
+        .event-content {
+            padding: 20px;
+            background-color: #1e1e1e;
+            position: relative;
+            border-radius: 8px;
+            border-left: 5px solid #ff4d4d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .event-content:hover {
+            transform: translateY(-3px);
+            background-color: #252525;
+        }
+        .event-year {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4d4d;
+            margin-bottom: 5px;
+        }
+        .event-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .event-details {
+            display: none;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #b0b0b0;
+            margin-top: 10px;
+            border-top: 1px solid #333;
+            padding-top: 10px;
+        }
+        .active .event-details {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BionX ChronoHistory</h1>
+        <p>WW2 Chronicles — Click on the years to explore the details</p>
+    </header>
+
+    <div class="timeline">
+        <!-- 1939 -->
+        <div class="event-card">
+            <div class="event-content" onclick="toggleDetails(this)">
+                <div class="event-year">1939</div>
+                <div class="event-title">The Outbreak of Total War</div>
+                <div class="event-details">
+                    On September 1, 1939, Nazi Germany launched a brutal surprise invasion of Poland, utilizing the devastating "Blitzkrieg" (Lightning War) doctrine. This coordinated strike combined fast-moving tanks, motorized infantry, and overwhelming air support from the Luftwaffe. In response to this aggression, Great Britain and France honored their treaties and declared war on Germany on September 3, officially igniting the global conflagration. Meanwhile, the Soviet Union invaded Poland from the east on September 17 under the secret protocols of the Molotov-Ribbentrop Pact.
+                </div>
+            </div>
+        </div>
+
+        <!-- 1941 -->
+        <div class="event-card">
+            <div class="event-content" onclick="toggleDetails(this)">
+                <div class="event-year">1941</div>
+                <div class="event-title">Global Escalation & Barbarossa</div>
+                <div class="event-details">
+                    The war expanded drastically in 1941. On June 22, Nazi Germany broke its non-aggression pact and launched Operation Barbarossa—the largest military invasion in human history, deploying over 3 million soldiers into the Soviet Union. Despite massive initial German gains, the Red Army managed to halt the Axis forces just outside Moscow as the brutal winter set in. On the other side of the globe, on December 7, 1941, the Imperial Japanese Navy executed a surprise aerial assault on the US Naval Base at Pearl Harbor, Hawaii. This crucial event instantly brought the economic and military might of the United States into World War II as an Allied power.
+                </div>
+            </div>
+        </div>
+
+        <!-- 1943 -->
+        <div class="event-card">
+            <div class="event-content" onclick="toggleDetails(this)">
+                <div class="event-year">1943</div>
+                <div class="event-title">The Great Turning Point</div>
+                <div class="event-details">
+                    1943 was the year the Axis momentum was permanently broken. In February, the remnants of the German 6th Army surrendered at Stalingrad, marking one of the bloodiest and most strategic defeats for Hitler's forces. Following this, in July, the German high command attempted a massive counter-offensive resulting in the Battle of Kursk—the largest tank battle in history, involving thousands of armored vehicles. The Soviet victory at Kursk shattered Germany's strategic capabilities on the Eastern Front. Concurrently, Western Allies invaded Sicily and mainland Italy, forcing Benito Mussolini from power.
+                </div>
+            </div>
+        </div>
+
+        <!-- 1945 -->
+        <div class="event-card">
+            <div class="event-content" onclick="toggleDetails(this)">
+                <div class="event-year">1945</div>
+                <div class="event-title">The Fall of Empires & Peace</div>
+                <div class="event-details">
+                    The final chapter of the war. Allied forces advanced into Germany from both the West and East. In April, Soviet forces launched the massive Battle of Berlin, culminating in the unconditional surrender of Germany on May 8 (V-E Day). In the Pacific Theater, to avoid a costly mainland invasion, the United States dropped two atomic bombs on the Japanese cities of Hiroshima and Nagasaki in August. This unprecedented destruction led to the official surrender of Japan on September 2, 1945, aboard the USS Missouri, finally ending World War II.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
